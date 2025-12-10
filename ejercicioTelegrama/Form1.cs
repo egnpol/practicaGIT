@@ -32,7 +32,7 @@ namespace ejercicioTelegrama
                 tipoTelegrama = 'o';
             }
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (radioBtnUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }

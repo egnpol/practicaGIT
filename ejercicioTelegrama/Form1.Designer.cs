@@ -30,10 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtTelegram = new System.Windows.Forms.TextBox();
-            this.chkUrgente = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.radioBtnOrdinario = new System.Windows.Forms.RadioButton();
+            this.radioBtnUrgente = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -54,17 +55,6 @@
             this.txtTelegram.Size = new System.Drawing.Size(324, 103);
             this.txtTelegram.TabIndex = 1;
             // 
-            // chkUrgente
-            // 
-            this.chkUrgente.AutoSize = true;
-            this.chkUrgente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUrgente.Location = new System.Drawing.Point(44, 202);
-            this.chkUrgente.Name = "chkUrgente";
-            this.chkUrgente.Size = new System.Drawing.Size(78, 17);
-            this.chkUrgente.TabIndex = 2;
-            this.chkUrgente.Text = "Urgente?";
-            this.chkUrgente.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -81,7 +71,6 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 4;
-           // this.txtPrecio.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnCalcular
             // 
@@ -93,15 +82,40 @@
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
+            // radioBtnOrdinario
+            // 
+            this.radioBtnOrdinario.AutoSize = true;
+            this.radioBtnOrdinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnOrdinario.Location = new System.Drawing.Point(47, 202);
+            this.radioBtnOrdinario.Name = "radioBtnOrdinario";
+            this.radioBtnOrdinario.Size = new System.Drawing.Size(76, 17);
+            this.radioBtnOrdinario.TabIndex = 6;
+            this.radioBtnOrdinario.TabStop = true;
+            this.radioBtnOrdinario.Text = "Ordinario";
+            this.radioBtnOrdinario.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnUrgente
+            // 
+            this.radioBtnUrgente.AutoSize = true;
+            this.radioBtnUrgente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioBtnUrgente.Location = new System.Drawing.Point(136, 202);
+            this.radioBtnUrgente.Name = "radioBtnUrgente";
+            this.radioBtnUrgente.Size = new System.Drawing.Size(70, 17);
+            this.radioBtnUrgente.TabIndex = 7;
+            this.radioBtnUrgente.TabStop = true;
+            this.radioBtnUrgente.Text = "Urgente";
+            this.radioBtnUrgente.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioBtnUrgente);
+            this.Controls.Add(this.radioBtnOrdinario);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.chkUrgente);
             this.Controls.Add(this.txtTelegram);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -115,10 +129,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTelegram;
-        private System.Windows.Forms.CheckBox chkUrgente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.RadioButton radioBtnOrdinario;
+        private System.Windows.Forms.RadioButton radioBtnUrgente;
     }
 }
 
