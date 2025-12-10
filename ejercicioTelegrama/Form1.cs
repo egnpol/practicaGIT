@@ -24,17 +24,23 @@ namespace ejercicioTelegrama
             int numPalabras = 0;
             double coste;
 
-            //Leo el telegrama  
+            // Leo el telegrama
             textoTelegrama = txtTelegram.Text;
-            // telegrama urgente? 
+            // Controla que almenos exista un caracter para ser ordinario 
+            if (textoTelegrama.Length > 1)
+            {
+                tipoTelegrama = 'o';
+            }
+            // telegrama urgente?
             if (chkUrgente.Checked)
             {
                 tipoTelegrama = 'u';
             }
-            //Obtengo el número de palabras que forma el telegrama  
-            numPalabras = textoTelegrama.Length;
+            // Obtener el número de palabras que forma el telegrama
+            string[] palabras = textoTelegrama.Split(' ');
+            numPalabras = palabras.Length;
 
-            //Si el telegrama es ordinario 
+            // Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
             {
                 if (numPalabras <= 10)
@@ -43,11 +49,11 @@ namespace ejercicioTelegrama
                 }
                 else
                 {
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + 0.5 * (numPalabras - 10);
                 }
             }
             else
-            //Si el telegrama es urgente 
+            // Si el telegrama es urgente
             {
                 if (tipoTelegrama == 'u')
                 {
@@ -67,6 +73,6 @@ namespace ejercicioTelegrama
             }
             txtPrecio.Text = coste.ToString() + " euros";
         }
-    
+
     }
 }
